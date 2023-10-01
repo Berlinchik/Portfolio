@@ -5,12 +5,12 @@ import {
   faJsSquare,
   faNodeJs,
   faReact,
-} from '@fortawesome/free-brands-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { useEffect, useState } from 'react'
-import Loader from 'react-loaders'
-import AnimatedLetters from '../AnimatedLetters/AnimatedLetters'
-import './About.scss'
+} from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useEffect, useState } from 'react';
+import Loader from 'react-loaders';
+import AnimatedLetters from '../AnimatedLetters/AnimatedLetters';
+import './About.scss';
 
 const cubeInfo = [
   { className: 'face1', icon: faNodeJs, color: '#DD0031', id: '11' },
@@ -19,16 +19,16 @@ const cubeInfo = [
   { className: 'face4', icon: faReact, color: '#5ED4F4', id: '44' },
   { className: 'face5', icon: faJsSquare, color: '#EFD81D', id: '55' },
   { className: 'face6', icon: faGithub, color: '#EC4D28', id: '66' },
-]
+];
 
 const About = () => {
-  const [letterClass, setLetterClass] = useState('text-animate')
+  const [letterClass, setLetterClass] = useState('text-animate');
 
   useEffect(() => {
     setTimeout(() => {
-      setLetterClass('text-animate-hover')
-    }, 3000)
-  }, [])
+      setLetterClass('text-animate-hover');
+    }, 3000);
+  }, []);
 
   return (
     <>
@@ -47,7 +47,12 @@ const About = () => {
             Architecture, I discovered my true calling in the world of IT about
             a year ago. Since then, I've been on a transformative journey,
             pursuing my interest in web development through rigorous training at{' '}
-            <a className="goit" target="_blank" href="https://goit.global/us/">
+            <a
+              className="goit"
+              target="_blank"
+              rel="noreferrer"
+              href="https://goit.global/us/"
+            >
               GoIT
             </a>{' '}
             Academy.
@@ -79,7 +84,7 @@ const About = () => {
       </div>
       <Loader type="pacman" />
     </>
-  )
-}
+  );
+};
 
-export default About
+export default About;
