@@ -1,0 +1,102 @@
+@import 'assets/styles/vars';
+@import 'assets/styles/mixins';
+
+.home-page {
+  position: relative;
+  background-image: url(/assets/images/background-1.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+
+  @include desktop {
+    background-position: initial;
+  }
+
+  .text-zone {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80%;
+    max-height: 90%;
+    z-index: 99;
+
+    @include desktop {
+      width: 40%;
+    }
+  }
+
+  h1 {
+    color: $main-white;
+    font-size: 32px;
+    margin: 0;
+    font-family: 'Coolvetica';
+    font-weight: 400;
+
+    @include tablet {
+      font-size: 53px;
+    }
+
+    &::before {
+      content: '<h1>';
+      font-family: 'La Belle Aurore';
+      color: $primary-color;
+      font-size: 18px;
+      position: absolute;
+      margin-top: -40px;
+      left: 15px;
+      animation: fadeIn 1s 1.7s backwards;
+      opacity: 0.6;
+    }
+
+    &::after {
+      content: '</h1>';
+      font-family: 'La Belle Aurore';
+      color: $primary-color;
+      font-size: 18px;
+      position: absolute;
+      margin-top: 18px;
+      margin-left: 20px;
+      animation: fadeIn 1s 1.7s backwards;
+      opacity: 0.6;
+    }
+  }
+}
+
+h2 {
+  color: #8d8d8d;
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 11px;
+  font-family: sans-serif;
+  letter-spacing: 3px;
+  animation: fadeIn 1s 1.8s backwards;
+}
+
+.flat-button {
+  color: $primary-color;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 4px;
+  font-family: sans-serif;
+  text-decoration: none;
+  padding: 8px 14px;
+  border: 1px solid $primary-color;
+  border-radius: 4px;
+  margin-top: 25px;
+  float: left;
+  animation: fadeIn 1s backwards;
+  white-space: nowrap;
+
+  @include desktop {
+    font-size: 13px;
+    font-weight: 400;
+    padding: 10px 18px;
+  }
+
+  &:hover {
+    background-color: $primary-color;
+    color: $main-black;
+  }
+}
